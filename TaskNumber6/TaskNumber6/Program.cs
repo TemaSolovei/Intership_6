@@ -8,15 +8,20 @@ namespace TaskNumber6
 {
     class Program
     {
+        /// <summary>
+        /// Задача №6, вариант №10, учебная практика
+        /// Соловьев Артём Александрович, ПИ-16-1
+        /// </summary>
+
         static void Main(string[] args)
         {
-            Calculate.Solve();
+            Calculate.Solve(); // Запуск выполнения задачи
         }
     }
 
     class IO
     {
-        public static void Input(out int a1, out int a2, out int a3, out int num)
+        public static void Input(out int a1, out int a2, out int a3, out int num) // Ввод начальных значений
         {
             CyanStripe(1, Console.WindowWidth);
             Console.WriteLine("Ввод начальных значений \n Не забывайте, что числа должны быть целыми");
@@ -60,7 +65,7 @@ namespace TaskNumber6
         public static void Output(int[] mas) // Вывод последовательности
         {
             CyanStripe(1, Console.WindowWidth);
-            Console.WriteLine("Вывод последовательности из " + mas.Length + " элементов");
+            Console.WriteLine("Вывод последовательности из " + mas.Length + " элементов: ");
             CyanStripe(1, Console.WindowWidth);
 
             for (int i = 0; i < mas.Length; i++)
@@ -77,7 +82,7 @@ namespace TaskNumber6
 
     class Calculate
     {
-        static int[] CreateMas(int a1, int a2, int a3, int num)
+        static int[] CreateMas(int a1, int a2, int a3, int num) // Создание последовательности
         {
             int[] mas = new int[num]; // Инициализация массива
 
@@ -93,7 +98,7 @@ namespace TaskNumber6
             return mas;
         }
 
-        public static bool Check(int[] mas)
+        public static bool Check(int[] mas) // Проверка на возрастание подпоследовательности из чётных элементов последовательности
         {
             bool result = false; // Результат проверки на возрастание чётных элементов последовательности
 
@@ -110,7 +115,7 @@ namespace TaskNumber6
             return result;
         }
 
-        public static void Solve()
+        public static void Solve() // Решение задачи
         {
             int a1, a2, a3, num; // a1 - первый элемент последовательности, a2 - второй, a3 - третий, num - количество элементов последовательности
 
